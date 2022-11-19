@@ -8,8 +8,10 @@ const count = ref(0)
 
 <template>
   <div class="content">
-    <div class="box-image"></div>
-    <h1>Olá! Meu nome é <strong>Gustavo Neitzke</strong></h1>
+    <div class="box-image">
+      <img src="gn.png" alt="Foto de perfil">
+    </div>
+    <h1>Olá! Seja bem-vindo ao perfil de <strong>Gustavo Neitzke</strong></h1>
   </div>
 </template>
 
@@ -25,10 +27,19 @@ const count = ref(0)
       width: 70px;
       background-color: $green;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
     }
     h1{
       color: $white;
       margin: 0;
+      font-weight: 100;
       strong{
         color: $green;
       }
