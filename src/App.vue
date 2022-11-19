@@ -13,7 +13,7 @@ import Header from './components/Header.vue'
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   .content{
   }
 </style>

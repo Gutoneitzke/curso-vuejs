@@ -22,6 +22,7 @@ const count = ref(0)
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+    border-bottom: 1px solid $gray;
     .box-image{
       height: 70px;
       width: 70px;
