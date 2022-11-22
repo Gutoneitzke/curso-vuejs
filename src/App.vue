@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
+import SocialNetwork from './components/SocialNetwork.vue'
 </script>
 
 <template>
@@ -13,11 +14,10 @@ import Header from './components/Header.vue'
         <div class="left--informations">
           <h2>Gustavo Neitzke</h2>
           <p>Sit sit deserunt pariatur dolor do deserunt cupidatat labore minim Lorem consequat sunt. Minim magna quis amet et ut magna ad pariatur do nostrud id. Mollit do ipsum laboris elit officia amet sunt.</p>
+          <p>Sit sit deserunt pariatur dolor do deserunt cupidatat labore minim Lorem consequat sunt. Minim magna quis amet et ut magna ad pariatur do nostrud id. Mollit do ipsum laboris elit officia amet sunt.</p>
         </div>
       </div>
-      <div class="content--right">
-        componente das redes sociais
-      </div>
+      <SocialNetwork />
     </main>
   </div>
 </template>
@@ -28,7 +28,7 @@ import Header from './components/Header.vue'
       display: grid;
       grid-template-columns: 3fr 1fr;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       margin: 2rem;
       min-height: 50vh;
       .content--left{
@@ -38,9 +38,6 @@ import Header from './components/Header.vue'
         h2{
           font-size: 3rem;
         }
-      }
-      .content--right{
-
       }
     }
   }

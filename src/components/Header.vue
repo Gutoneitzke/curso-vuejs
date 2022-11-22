@@ -1,13 +1,5 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <div class="content">
+  <div class="header">
     <div class="box-image">
       <img src="gn.png" alt="Foto de perfil">
     </div>
@@ -16,7 +8,7 @@ const count = ref(0)
 </template>
 
 <style lang="scss" scoped>
-  .content{
+  .header{
     display: flex;
     justify-content: center;
     align-items: center;
