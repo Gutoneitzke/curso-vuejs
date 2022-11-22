@@ -1,8 +1,5 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: #1E1E1E;
-}
-
-body {
-  min-height: 100vh;
+  color: #fff;
 }
