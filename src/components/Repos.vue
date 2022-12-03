@@ -28,8 +28,8 @@ getReposFromGithub()
 
 <template>
   <div v-if="repos" class="repos">
-    <carousel>
-      <slide v-for="(repo,i) in repos" :key="i" :class="['repos--repo', !repo.transform ? '' : 'rotate']" @click="transformCard(repo)">
+    <Carousel :items-to-show="1">
+      <Slide v-for="(repo,i) in repos" :key="i" :class="['repos--repo', !repo.transform ? '' : 'rotate']" @click="transformCard(repo)">
         <div v-if="!repo.transform" class="front-card">
           <p v-text="repo.name"></p>
         </div>
@@ -46,12 +46,12 @@ getReposFromGithub()
             </li>
           </ul>
         </div>
-      </slide>
+      </Slide>
 
       <template #addons>
-        <navigation />
+        <Navigation />
       </template>
-    </carousel>
+    </Carousel>
   </div>
   <p v-else>Nenhum registro</p>
 </template>
