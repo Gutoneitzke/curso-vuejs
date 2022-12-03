@@ -39,7 +39,7 @@ const languages = ref<Object>([
           </div>
         </div>
       </div>
-      <SocialNetwork :names="{insta: '@gutoneitzke',face: 'Gustavo Neitzke',youtube: 'Gustavo Neitzke'}"/>
+      <SocialNetwork />
     </main>
     <footer>
       <Repos />
