@@ -52,7 +52,7 @@ const props = defineProps({
     h3{
       font-size: 1.8rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid $grey;
       width: 90%;
       text-align: center;
     }

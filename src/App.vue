@@ -73,7 +73,7 @@ const languages = ref<Object>([
             flex-wrap: wrap;
             gap: 1rem;
             span{
-              background-color: $gray;
+              background-color: $grey;
               padding: .1rem 1rem;
               font-size: .8rem;
               border-radius: 1rem;

@@ -14,7 +14,7 @@
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $grey;
     .box-image{
       height: 70px;
       width: 70px;

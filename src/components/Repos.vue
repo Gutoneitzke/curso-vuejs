@@ -26,8 +26,29 @@ getReposFromGithub()
       <p v-text="repo.name"></p>
     </div>
   </div>
+  <p v-else>Nenhum registro</p>
 </template>
 
 <style lang="scss" scoped>
-  
+  .repos{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .repos--repo{
+      min-width: 140px;
+      min-height: 140px;
+      max-width: 140px;
+      max-height: 140px;
+      background: linear-gradient(to bottom, $green, $dark2);
+      border-radius: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      p{
+        text-align: center;
+      }
+    }
+  }
 </style>
