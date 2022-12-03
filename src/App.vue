@@ -1,6 +1,23 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import Header from './components/Header.vue'
 import SocialNetwork from './components/SocialNetwork.vue'
+import Repos from './components/Repos.vue'
+
+const languages = ref<Object>([
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'Typescript',
+  'Vue.js',
+  'React.js',
+  'Node.js',
+  'PHP',
+  'Laravel',
+  'Mysql',
+  'Mariadb'
+])
+
 </script>
 
 <template>
@@ -18,22 +35,15 @@ import SocialNetwork from './components/SocialNetwork.vue'
             <p>Sit sit deserunt pariatur dolor do deserunt cupidatat labore minim Lorem consequat sunt. Minim magna quis amet et ut magna ad pariatur do nostrud id. Mollit do ipsum laboris elit officia amet sunt.</p>
           </div>
           <div class="informations--languages">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Typescript</span>
-            <span>Vue.js</span>
-            <span>React.js</span>
-            <span>Node.js</span>
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>Mysql</span>
-            <span>Mariadb</span>
+            <span v-for="(l,i) in languages" :key="i" v-text="l"></span>
           </div>
         </div>
       </div>
-      <SocialNetwork />
+      <SocialNetwork nome="@gutoneitzke"/>
     </main>
+    <footer>
+      <Repos />
+    </footer>
   </div>
 </template>
 
