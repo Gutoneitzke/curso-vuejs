@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { ref, defineProps } from 'vue'
-import axios from 'axios'
-
+import { defineProps } from 'vue'
 
 const props = defineProps({
   names: {
