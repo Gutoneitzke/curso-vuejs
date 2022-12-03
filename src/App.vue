@@ -50,15 +50,18 @@ const languages = ref<Object>([
 <style lang="scss" scoped>
   .content{
     main{
-      display: grid;
-      grid-template-columns: 3fr 1fr;
+      display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 2rem;
       margin: 2rem;
       .my-description{
         display: flex;
         align-items: center;
         gap: 1rem;
+        width: 58rem;
+        min-width: 500px;
         .informations{
           display: flex;
           flex-direction: column;
