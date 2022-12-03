@@ -25,6 +25,7 @@ getReposFromGithub()
 </script>
 
 <template>
+  <h5>Meus repositório no Github</h5>
   <div v-if="repos" class="repos">
     <div v-for="(repo,i) in repos" :key="i" :class="['repos--repo', !repo.transform ? '' : 'rotate']" @click="transformCard(repo)">
       <div v-if="!repo.transform" class="front-card">
