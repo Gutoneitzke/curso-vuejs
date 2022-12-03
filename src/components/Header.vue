@@ -12,12 +12,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
     border-bottom: 1px solid $grey;
     .box-image{
-      height: 70px;
-      width: 70px;
+      min-height: 70px;
+      min-width: 70px;
+      max-width: 70px;
+      max-height: 70px;
       background-color: $green;
       border-radius: 50%;
       display: flex;
@@ -32,6 +35,7 @@
       color: $white;
       margin: 0;
       font-weight: 100;
+      text-align: center;
       strong{
         color: $green;
       }

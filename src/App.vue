@@ -61,7 +61,6 @@ const languages = ref<Object>([
         align-items: center;
         gap: 1rem;
         width: 58rem;
-        min-width: 500px;
         .informations{
           display: flex;
           flex-direction: column;
@@ -94,6 +93,16 @@ const languages = ref<Object>([
       margin: 2rem;
       h4{
         font-weight: 100;
+      }
+    }
+  }
+
+  @media (max-width: 768px)
+  {
+    main{
+      margin: .4rem;
+      img{
+        display: none;
       }
     }
   }

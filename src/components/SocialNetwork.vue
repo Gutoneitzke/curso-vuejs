@@ -46,7 +46,7 @@ const props = defineProps({
     border-radius: 1rem;
     padding: 1rem;
     min-height: 20rem;
-    min-width: 20rem;
+    min-width: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: left;
