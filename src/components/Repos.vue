@@ -11,7 +11,6 @@ const getReposFromGithub = () => {
     .get('https://api.github.com/users/Gutoneitzke/repos')
     .then((response: any) => {
       repos.value = response.data
-      console.log(repos.value)
     })
     .catch((e: any) => {
       console.log(e)
@@ -29,13 +28,21 @@ getReposFromGithub()
 
 <template>
   <div v-if="repos" class="repos">
-    <carousel :items-to-show="5">
-      <slide v-for="(repo,i) in repos" :key="i" :class="['repos--repo', !repo.transform ? '' : 'rotate']" @mouseout="!repo.transform ? '' : transformCard(repo)" @click="transformCard(repo)">
-        <div v-if="!repo.transform">
+    <carousel>
+      <slide v-for="(repo,i) in repos" :key="i" :class="['repos--repo', !repo.transform ? '' : 'rotate']" @click="transformCard(repo)">
+        <div v-if="!repo.transform" class="front-card">
           <p v-text="repo.name"></p>
         </div>
-        <div v-else>
-          <p v-text="repo.stargazers_count"></p>
+        <div v-else class="back-card">
+          <ul>
+            <li>
+              {{ repo.stargazers_count }}
+              Estrelas
+            </li>
+            <li class="access">
+              <a :href="repo.html_url" target="_blank" v-text="'Acessar'"></a>
+            </li>
+          </ul>
         </div>
       </slide>
 
@@ -67,15 +74,31 @@ getReposFromGithub()
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            p{
-              text-align: center;
-              text-transform: capitalize;
+            .front-card{
+              p{
+                text-align: center;
+                text-transform: capitalize;
+              }
+            }
+            .back-card{
+              ul{
+                padding: 0;
+                list-style-type: none;
+                .access{
+                  margin-top: 1rem;
+                  a{
+                    color: $green;
+                    text-decoration: none;
+                  }
+                }
+              }
             }
           }
           .rotate{
             animation: rotatecard;
             animation-duration: 1s;
             background: linear-gradient(to bottom, $dark, $dark2);
+            border: 1px solid $green;
           }
         }
       }
